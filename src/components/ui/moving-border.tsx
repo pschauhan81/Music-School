@@ -81,8 +81,9 @@ export const MovingBorder = ({
   rx?: string;
   ry?: string;
   [key: string]: any;
+
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<SVGRectElement>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
